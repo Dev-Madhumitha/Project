@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #090014;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    color: #d8a4ff;
+    font-size: 36px;
+    text-shadow: 0 0 15px #9d4edd;
+}
+
+header p {
+    color: #aaa;
+    margin-top: 8px;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.content {
+    width: 42%;
+}
+
+.card {
+    background: #160b25;
+    border: 1px solid #7137a8;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 12px rgba(157, 78, 221, 0.2);
+}
+
+.card h2 {
+    color: #d8a4ff;
+    margin-bottom: 10px;
+}
+
+.card p,
+.card li {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.card ul {
+    padding-left: 20px;
+}
+
+.technology {
+    display: flex;
+    gap: 10px;
+}
+
+.technology span {
+    border: 1px solid #9d4edd;
+    border-radius: 20px;
+    padding: 7px 14px;
+    color: #d8a4ff;
+}
+
+.game-section {
+    width: 58%;
+}
+
+.game-header {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.game-header h2 {
+    color: #d8a4ff;
+}
+
+.game-header p {
+    color: #999;
+    margin-top: 5px;
+}
+
+#gameBox {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(#160b25 1px, transparent 1px),
+        linear-gradient(90deg, #160b25 1px, transparent 1px);
+
+    background-size: 30px 30px;
+
+    border: 2px solid #8a2be2;
+    border-radius: 16px;
+
+    box-shadow:
+        0 0 20px rgba(138, 43, 226, 0.5);
+}
+
+.snake {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+
+    background: #b85cff;
+
+    box-shadow:
+        0 0 8px #b85cff,
+        0 0 18px #9d4edd;
+
+    pointer-events: none;
+}
+
+.snake.head {
+    width: 24px;
+    height: 24px;
+    background: #e0aaff;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+
+@media (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .content,
+    .game-section {
+        width: 100%;
+    }
+
+    #gameBox {
+        height: 400px;
+    }
+}
